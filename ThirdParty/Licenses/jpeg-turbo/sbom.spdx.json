@@ -1,0 +1,55 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-jpeg-turbo-3.2.0",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:48Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/jpeg-turbo-3.2.0.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-jpeg-turbo-src"
+  ],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-jpeg-turbo",
+      "fileName": "libjpeg-turbo-3.2.0.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6f30092cef9fb839779646608f4ee14ae3cbac989c47fa05e841b0841f09878e"
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-jpeg-turbo-src",
+      "name": "jpeg-turbo",
+      "versionInfo": "3.2.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-06-30T17:25:43Z",
+      "licenseConcluded": "IJG AND Zlib AND BSD-3-Clause",
+      "downloadLocation": "https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.2.0/libjpeg-turbo-3.2.0.tar.gz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "6f30092cef9fb839779646608f4ee14ae3cbac989c47fa05e841b0841f09878e"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-File-jpeg-turbo",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-jpeg-turbo-src"
+    }
+  ]
+}

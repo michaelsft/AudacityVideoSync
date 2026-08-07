@@ -1,0 +1,44 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-rubberband-4.0.0",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:59Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/rubberband-4.0.0.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-rubberband-src"
+  ],
+  "files": [],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-rubberband-src",
+      "name": "rubberband",
+      "versionInfo": "4.0.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2024-10-25 16:26:08 UTC",
+      "licenseConcluded": "GPL-2.0-or-later",
+      "downloadLocation": "https://breakfastquay.com/files/releases/rubberband-4.0.0.tar.bz2",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "af050313ee63bc18b35b2e064e5dce05b276aaf6d1aa2b8a82ced1fe2f8028e9"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-File-rubberband",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-rubberband-src"
+    }
+  ]
+}

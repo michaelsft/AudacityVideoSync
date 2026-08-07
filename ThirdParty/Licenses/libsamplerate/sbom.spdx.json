@@ -1,0 +1,54 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-libsamplerate-0.2.2",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:59Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/libsamplerate-0.2.2.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-libsamplerate-src"
+  ],
+  "files": [],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-libsamplerate-src",
+      "name": "libsamplerate",
+      "versionInfo": "0.2.2",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2021-09-05 11:48:12 UTC",
+      "licenseConcluded": "BSD-2-Clause",
+      "downloadLocation": "https://github.com/libsndfile/libsamplerate/archive/refs/tags/0.2.2.tar.gz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "16e881487f184250deb4fcb60432d7556ab12cb58caea71ef23960aec6c0405a"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Patch-libsamplerate-0",
+      "relationshipType": "PATCH_APPLIED",
+      "relatedSpdxElement": "SPDXRef-Archive-libsamplerate-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Patch-libsamplerate-1",
+      "relationshipType": "PATCH_APPLIED",
+      "relatedSpdxElement": "SPDXRef-Archive-libsamplerate-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-File-libsamplerate",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-libsamplerate-src"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+.DS_Store
+*.swp
+*.tmp
+
+# Generated release output
+dist/*
+!dist/.gitkeep
+
+# Local build artefacts
+.build/
+DerivedData/
+build/
+*.o
+*.swiftmodule
+
+# Local signing/notarisation material
+*.p12
+*.cer
+*.provisionprofile
+*.mobileprovision
+notarytool-profile*

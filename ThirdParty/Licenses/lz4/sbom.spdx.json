@@ -1,0 +1,44 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-lz4-1.10.0",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:48Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/lz4-1.10.0.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-lz4-src"
+  ],
+  "files": [],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-lz4-src",
+      "name": "lz4",
+      "versionInfo": "1.10.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2024-07-21 17:29:49 UTC",
+      "licenseConcluded": "BSD-2-Clause",
+      "downloadLocation": "https://github.com/lz4/lz4/archive/refs/tags/v1.10.0.tar.gz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-File-lz4",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-lz4-src"
+    }
+  ]
+}

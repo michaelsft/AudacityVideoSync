@@ -1,0 +1,49 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-mujs-1.3.9",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:59Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/mujs-1.3.9.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-mujs-src"
+  ],
+  "files": [],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-mujs-src",
+      "name": "mujs",
+      "versionInfo": "1.3.9",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-03-02 10:31:07 UTC",
+      "licenseConcluded": "ISC",
+      "downloadLocation": "https://mujs.com/downloads/mujs-1.3.9.tar.gz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "956d5a20dd4efe5aa58673558787b9e2539255f9bf62585e90e1921fa040d89d"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-Patch-mujs-0",
+      "relationshipType": "PATCH_APPLIED",
+      "relatedSpdxElement": "SPDXRef-Archive-mujs-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-File-mujs",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-mujs-src"
+    }
+  ]
+}

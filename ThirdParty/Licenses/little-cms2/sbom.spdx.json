@@ -1,0 +1,44 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-little-cms2-2.19",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:58Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/little-cms2-2.19.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-little-cms2-src"
+  ],
+  "files": [],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-little-cms2-src",
+      "name": "little-cms2",
+      "versionInfo": "2.19",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-04-24T09:17:40Z",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://downloads.sourceforge.net/project/lcms/lcms/2.19/lcms2-2.19.tar.gz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "49e7e134e4299733dd0eda434fa468997a28ab3d33fa397c642b03644f552216"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-File-little-cms2",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-little-cms2-src"
+    }
+  ]
+}

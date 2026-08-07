@@ -1,0 +1,55 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-ffmpeg-8.1.2",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:47Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/ffmpeg-8.1.2.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-ffmpeg-src"
+  ],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-ffmpeg",
+      "fileName": "ffmpeg-8.1.2.tar.xz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c"
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-ffmpeg-src",
+      "name": "ffmpeg",
+      "versionInfo": "8.1.2",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-06-17T02:46:57Z",
+      "licenseConcluded": "GPL-3.0-or-later",
+      "downloadLocation": "https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-File-ffmpeg",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-ffmpeg-src"
+    }
+  ]
+}

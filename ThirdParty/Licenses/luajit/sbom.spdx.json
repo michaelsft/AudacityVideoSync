@@ -1,0 +1,98 @@
+{
+  "SPDXID": "SPDXRef-DOCUMENT",
+  "spdxVersion": "SPDX-2.3",
+  "name": "SBOM-SPDX-luajit-2.1.1785763465",
+  "creationInfo": {
+    "created": "2026-08-05T22:09:59Z",
+    "creators": [
+      "Tool: https://github.com/Homebrew/brew@4.2.5"
+    ]
+  },
+  "dataLicense": "CC0-1.0",
+  "documentNamespace": "https://formulae.brew.sh/spdx/luajit-2.1.1785763465.json",
+  "documentDescribes": [
+    "SPDXRef-Archive-luajit-src",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-luajit"
+  ],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-luajit",
+      "fileName": "1edc3e52b67eaf6ce5f809be8e17d6862594b8bc.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "85497ea149d136afbe2d7ef222e08849248e52cecc6dc8deefd8588e551e4e00"
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "SPDXID": "SPDXRef-Archive-luajit-src",
+      "name": "luajit",
+      "versionInfo": "2.1.1785763465",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-08-03T13:24:25Z",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://github.com/LuaJIT/LuaJIT/archive/1edc3e52b67eaf6ce5f809be8e17d6862594b8bc.tar.gz",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "85497ea149d136afbe2d7ef222e08849248e52cecc6dc8deefd8588e551e4e00"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "26.6",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-luajit",
+      "name": "luajit",
+      "versionInfo": "2.1.1785763465",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-08-03T15:23:35Z",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/luajit/blobs/sha256:3c94b56ef312c2b09ae3c0fd220b009b3a38357c58b0c09b833aca77fba06d76",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/luajit@2.1.1785763465",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3c94b56ef312c2b09ae3c0fd220b009b3a38357c58b0c09b833aca77fba06d76"
+        }
+      ]
+    }
+  ],
+  "relationships": [
+    {
+      "spdxElementId": "SPDXRef-File-luajit",
+      "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-luajit-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-luajit-src"
+    }
+  ]
+}
