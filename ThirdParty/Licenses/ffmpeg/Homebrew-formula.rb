@@ -1,14 +1,13 @@
 class Ffmpeg < Formula
   desc "Play, record, convert, and stream select audio and video codecs"
   homepage "https://ffmpeg.org/"
-  url "https://ffmpeg.org/releases/ffmpeg-8.1.2.tar.xz"
-  sha256 "464beb5e7bf0c311e68b45ae2f04e9cc2af88851abb4082231742a74d97b524c"
+  url "https://ffmpeg.org/releases/ffmpeg-9.0.tar.xz"
+  sha256 "7f607a00dd0d28a729d5a4811205812eef01cf6ef6155025febb6f36a9062d52"
   # None of these parts are used by default, you have to explicitly pass `--enable-gpl`
   # to configure to activate them. In this case, FFmpeg's license changes to GPL v2+.
   # Passing `--enable-version3` changes the license to GPL v3+.
   license "GPL-3.0-or-later"
-  revision 1
-  compatibility_version 2
+  compatibility_version 3
   head "https://github.com/FFmpeg/FFmpeg.git", branch: "master"
 
   livecheck do
@@ -33,6 +32,7 @@ class Ffmpeg < Formula
   depends_on "svt-av1"
   depends_on "x264"
   depends_on "x265"
+  depends_on "xz"
 
   uses_from_macos "bzip2"
   uses_from_macos "libxml2"
@@ -40,7 +40,6 @@ class Ffmpeg < Formula
   on_linux do
     depends_on "alsa-lib"
     depends_on "libxcb"
-    depends_on "xz"
     depends_on "zlib-ng-compat"
   end
 

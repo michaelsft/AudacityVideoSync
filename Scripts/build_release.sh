@@ -3,7 +3,7 @@ set -euo pipefail
 
 VERSION="${1:-}"
 if [ -z "$VERSION" ]; then
-    echo 'Usage: bash "Resources/DMG Files/build_audacity_video_sync_native.sh" 2.0'
+    echo 'Usage: bash Scripts/build_release.sh 2.1'
     exit 1
 fi
 if [[ "$VERSION" == *"/"* || "$VERSION" == *":"* ]]; then
@@ -56,6 +56,7 @@ require_tool() { if ! command -v "$1" >/dev/null 2>&1; then echo "Missing requir
 require_tool clang
 require_tool swiftc
 require_tool codesign
+require_tool security
 require_tool hdiutil
 require_tool create-dmg
 require_tool install_name_tool
@@ -68,6 +69,7 @@ require_file "$SOURCE_DIR/MPVPlayerView.h"
 require_file "$SOURCE_DIR/MPVPlayerView.m"
 require_file "$SOURCE_DIR/AudacityVideoSync-Bridging-Header.h"
 require_file "$SOURCE_DIR/Info.plist"
+require_file "$SOURCE_DIR/AudacityVideoSync.entitlements"
 require_file "$ICON_FILE"
 require_file "$VOLUME_ICON_FILE"
 require_file "$BACKGROUND_FILE"
@@ -76,6 +78,12 @@ require_file "$THIRD_PARTY_DIR/THIRD_PARTY_NOTICES.md"
 require_file "$THIRD_PARTY_DIR/DEPENDENCIES.md"
 require_file "$MPV_PREFIX/include/mpv/client.h"
 require_file "$MPV_PREFIX/lib/libmpv.2.dylib"
+
+SIGNING_IDENTITY="-"
+LOCAL_SIGNING_IDENTITY="Audacity Video Sync Local Development"
+if security find-identity -v -p codesigning | grep -Fq "\"$LOCAL_SIGNING_IDENTITY\""; then
+    SIGNING_IDENTITY="$LOCAL_SIGNING_IDENTITY"
+fi
 
 mkdir -p "$BUILD_DIR" "$MODULE_CACHE" "$MACOS_DIR" "$FRAMEWORKS_DIR" "$RESOURCES_DIR" "$DMG_SOURCE" "$INSTALLER_DIR"
 
@@ -186,9 +194,9 @@ for MACH_O in "$MACOS_DIR/$EXECUTABLE_NAME" "$FRAMEWORKS_DIR"/*.dylib; do
 done
 
 echo "Signing app and bundled libraries..."
-for LIBRARY in "$FRAMEWORKS_DIR"/*.dylib; do codesign --force --sign - "$LIBRARY" >/dev/null 2>&1; done
-codesign --force --sign - "$MACOS_DIR/$EXECUTABLE_NAME" >/dev/null 2>&1
-codesign --force --deep --sign - "$APP_BUNDLE" >/dev/null 2>&1
+for LIBRARY in "$FRAMEWORKS_DIR"/*.dylib; do codesign --force --timestamp=none --sign "$SIGNING_IDENTITY" "$LIBRARY" >/dev/null 2>&1; done
+codesign --force --timestamp=none --sign "$SIGNING_IDENTITY" --entitlements "$SOURCE_DIR/AudacityVideoSync.entitlements" "$MACOS_DIR/$EXECUTABLE_NAME" >/dev/null 2>&1
+codesign --force --timestamp=none --sign "$SIGNING_IDENTITY" --entitlements "$SOURCE_DIR/AudacityVideoSync.entitlements" "$APP_BUNDLE" >/dev/null 2>&1
 codesign --verify --deep --strict "$APP_BUNDLE"
 
 ditto "$APP_BUNDLE" "$DMG_SOURCE/$APP_NAME.app"

@@ -1,8 +1,8 @@
 class Fontconfig < Formula
   desc "XML-based font configuration API for X Windows"
   homepage "https://wiki.freedesktop.org/www/Software/fontconfig/"
-  url "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.2/fontconfig-2.18.2.tar.gz"
-  sha256 "a84d41b57cfb015783d7973b398c26d8763a64b803f97f31fa126fd2aa5eaaca"
+  url "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.3/fontconfig-2.18.3.tar.gz"
+  sha256 "9ae01e1d53acdef56010c5451cd34aa41d325b2faccd8606448d8fa01b2496b3"
   license all_of: [
     "HPND-sell-variant",
     "Unicode-3.0",        # fc-case/CaseFolding.txt
@@ -62,9 +62,8 @@ class Fontconfig < Formula
     system "meson", "install", "-C", "build"
   end
 
-  def post_install
-    ohai "Regenerating font cache, this may take a while"
-    system bin/"fc-cache", "--force", "--really-force", "--verbose"
+  post_install_steps do
+    run "fc-cache", args: ["--force", "--really-force", "--verbose"], base: :bin
   end
 
   test do

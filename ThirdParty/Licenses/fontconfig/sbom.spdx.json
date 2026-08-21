@@ -1,15 +1,15 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-fontconfig-2.18.2",
+  "name": "SBOM-SPDX-fontconfig-2.18.3",
   "creationInfo": {
-    "created": "2026-08-05T22:09:49Z",
+    "created": "2026-08-11T18:03:42Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@6.0.17"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/fontconfig-2.18.2.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/fontconfig-2.18.3.json",
   "documentDescribes": [
     "SPDXRef-Archive-fontconfig-src",
     "SPDXRef-Package-SPDXRef-libpng-1.6.58",
@@ -23,11 +23,11 @@
   "files": [
     {
       "SPDXID": "SPDXRef-File-fontconfig",
-      "fileName": "fontconfig-2.18.2.tar.gz",
+      "fileName": "fontconfig-2.18.3.tar.gz",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a84d41b57cfb015783d7973b398c26d8763a64b803f97f31fa126fd2aa5eaaca"
+          "checksumValue": "9ae01e1d53acdef56010c5451cd34aa41d325b2faccd8606448d8fa01b2496b3"
         }
       ]
     }
@@ -36,18 +36,18 @@
     {
       "SPDXID": "SPDXRef-Archive-fontconfig-src",
       "name": "fontconfig",
-      "versionInfo": "2.18.2",
+      "versionInfo": "2.18.3",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-09T09:30:10Z",
+      "builtDate": "2026-08-06T06:05:15Z",
       "licenseConcluded": "HPND-sell-variant AND Unicode-3.0 AND MIT-Modern-Variant AND MIT AND LicenseRef-Homebrew-public-domain",
-      "downloadLocation": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.2/fontconfig-2.18.2.tar.gz",
+      "downloadLocation": "https://gitlab.freedesktop.org/fontconfig/fontconfig/-/archive/2.18.3/fontconfig-2.18.3.tar.gz",
       "copyrightText": "NOASSERTION",
       "externalRefs": [],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "a84d41b57cfb015783d7973b398c26d8763a64b803f97f31fa126fd2aa5eaaca"
+          "checksumValue": "9ae01e1d53acdef56010c5451cd34aa41d325b2faccd8606448d8fa01b2496b3"
         }
       ]
     },
@@ -169,7 +169,7 @@
     {
       "SPDXID": "SPDXRef-Compiler",
       "name": "clang",
-      "versionInfo": "26.4",
+      "versionInfo": "26.6",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "NOASSERTION",
@@ -181,24 +181,24 @@
     {
       "SPDXID": "SPDXRef-Bottle-fontconfig",
       "name": "fontconfig",
-      "versionInfo": "2.18.2",
+      "versionInfo": "2.18.3",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-09T12:09:50Z",
+      "builtDate": "2026-08-06T09:13:23Z",
       "licenseConcluded": "HPND-sell-variant AND Unicode-3.0 AND MIT-Modern-Variant AND MIT AND LicenseRef-Homebrew-public-domain",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:75e19bf0d345662b39fc75781a71f3eb3c923a313a4f906c2f93a1a769846a3d",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/fontconfig/blobs/sha256:ad1c5a3054313853e9eefa9a07c32a3ff7b11c4fbcff9e73affc2a50233dbafe",
       "copyrightText": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:brew/fontconfig@2.18.2",
+          "referenceLocator": "pkg:brew/fontconfig@2.18.3",
           "referenceType": "purl"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "75e19bf0d345662b39fc75781a71f3eb3c923a313a4f906c2f93a1a769846a3d"
+          "checksumValue": "ad1c5a3054313853e9eefa9a07c32a3ff7b11c4fbcff9e73affc2a50233dbafe"
         }
       ]
     }

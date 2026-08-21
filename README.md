@@ -13,10 +13,16 @@ It embeds libmpv for accurate video playback while using Audacity's `mod-script-
 - Drag-and-drop or Open Video file selection.
 - Videos load paused and remain usable independently.
 - One-button synchronisation to Audacity's editing cursor.
-- Global `Control + Option + Space` shortcut to start and stop both applications.
+- Audacity's normal Space shortcut starts and stops both applications while synchronised.
+- Audacity's normal P shortcut pauses and resumes both applications without losing position.
 - Each start reads the current Audacity cursor before playback.
 - Each stop returns to that run's starting point.
+- Highlighted Audacity selections stop at their end and return both applications to the selection start.
+- Highlighted ranges appear directly on AVS's scrubber, with a slim playhead showing progress through the selection.
+- Keyboard following ignores label text fields and other interactive controls so transport keys retain their normal editing behaviour.
 - Configurable startup compensation.
+- Temporary live video offset from −30 to +30 seconds, with visible ±1 ms and ±10 ms adjustment buttons.
+- At-a-glance sync state, drift gauge and colour-coded zero/non-zero offset indication.
 - Apple Silicon only.
 
 ## Requirements
@@ -32,9 +38,12 @@ Audacity is not required for independent video playback.
 1. Open **Audacity > Settings > Modules**.
 2. Set **mod-script-pipe** to **Enabled**.
 3. Completely quit and reopen Audacity.
-4. Give Audacity Video Sync Accessibility permission if macOS requests it.
+4. Press **Sync Video to Audacity Cursor**. On first use, AVS opens **System Settings > Privacy & Security > Accessibility**.
+5. Enable Audacity Video Sync, return to AVS and press **Sync** again. This is normally a one-time approval; Input Monitoring is not required.
 
-See the illustrated [First-Time Setup Guide](Documentation/User%20Guides/Audacity%20Video%20Sync%202.0%20-%20First-Time%20Setup.png).
+Accessibility is needed so AVS can follow Audacity's ordinary transport keystrokes while preserving normal label editing. AVS does not install or require a dedicated global shortcut.
+
+See the illustrated [First-Time Setup Guide](Documentation/User%20Guides/Audacity%20Video%20Sync%202.1%20-%20First-Time%20Setup.png).
 
 ## Everyday use
 
@@ -42,9 +51,11 @@ See the illustrated [First-Time Setup Guide](Documentation/User%20Guides/Audacit
 2. Load the audio into Audacity and the matching video into AVS.
 3. Click **Sync Video to Audacity Cursor** once.
 4. Place Audacity's cursor inside the waveform.
-5. Press `Control + Option + Space` to start or stop both.
+5. Use Audacity normally: `Space` starts or stops both, and `P` pauses or resumes both. There is no AVS-specific key combination to remember.
 
-See the illustrated [Quick User Guide](Documentation/User%20Guides/Audacity%20Video%20Sync%202.0%20-%20Quick%20User%20Guide.png).
+If the source video and Audacity audio have not yet been aligned, use **Video offset** after connecting sync. Positive values advance the video and negative values delay it. The slider can be adjusted while both applications are playing; the offset is temporary and does not modify either file.
+
+See the illustrated [Quick User Guide](Documentation/User%20Guides/Audacity%20Video%20Sync%202.1%20-%20Quick%20User%20Guide.png).
 
 ## Building from source
 
@@ -53,7 +64,7 @@ The build requires an Apple Silicon Mac, Xcode command-line tools, Homebrew MPV,
 ```bash
 xcode-select --install
 brew install mpv create-dmg
-bash Scripts/build_release.sh 2.0
+bash Scripts/build_release.sh 2.1
 ```
 
 Finished release files are written to `dist/`. The release build also creates a corresponding third-party source archive and SHA-256 checksums. The first compliance build may take some time because Homebrew source archives must be downloaded; they are cached afterwards.

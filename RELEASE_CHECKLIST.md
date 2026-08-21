@@ -13,26 +13,26 @@
 1. Update the version in `Source/Info.plist` and `CHANGELOG.md`.
 2. Check that `ThirdParty/DEPENDENCIES.md` matches the installed libraries.
 3. Run `bash Scripts/collect_licenses.sh`.
-4. Commit and tag the exact release source, for example `v2.0`.
+4. Commit and tag the exact release source, for example `v2.1`.
 5. Run the public release builder:
 
    ```bash
-   bash Scripts/build_release.sh 2.0
+   bash Scripts/build_release.sh 2.1
    ```
 
 6. Verify the release:
 
    ```bash
-   bash Scripts/verify_release.sh 2.0
+   bash Scripts/verify_release.sh 2.1
    ```
 
 ## Upload to the GitHub Release
 
 Upload all of these from `dist/` to the same release:
 
-- `Audacity-Video-Sync-2.0.dmg`
-- `Audacity-Video-Sync-2.0-Third-Party-Source.tar.gz`
-- `SHA256SUMS-2.0.txt`
+- `Audacity-Video-Sync-2.1.dmg`
+- `Audacity-Video-Sync-2.1-Third-Party-Source.tar.gz`
+- `SHA256SUMS-2.1.txt`
 
 Do not upload a DMG without its corresponding source archive and checksums.
 
@@ -45,7 +45,8 @@ The current build is ad-hoc signed rather than Developer ID signed and notarised
 ## Final checks
 
 - Test the DMG on a different Apple Silicon Mac or a clean macOS account.
-- Confirm the app is version `2.0`, with no bracketed build number.
+- Confirm the app is version `2.1`, with no bracketed build number.
+- Confirm first-time synchronisation requests Accessibility—not Input Monitoring—and normal Space/P transport works after approval.
 - Confirm both user guides match the released interface.
 - Confirm the app's `Contents/Resources/Open Source Licences` folder is present.
 - Confirm the release description includes the independent-project trademark disclaimer.
