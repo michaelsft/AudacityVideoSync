@@ -19,7 +19,7 @@ It embeds libmpv for accurate video playback while using Audacity's `mod-script-
 - Each stop returns to that run's starting point.
 - Highlighted Audacity selections stop at their end and return both applications to the selection start.
 - Highlighted ranges appear directly on AVS's scrubber, with a slim playhead showing progress through the selection.
-- Keyboard following ignores label text fields and other interactive controls so transport keys retain their normal editing behaviour.
+- Space and P work normally when typing in Audacity labels and do not trigger playback while editing.
 - Configurable startup compensation.
 - Temporary live video offset from −30 to +30 seconds, with visible ±1 ms and ±10 ms adjustment buttons.
 - At-a-glance sync state, drift gauge and colour-coded zero/non-zero offset indication.
