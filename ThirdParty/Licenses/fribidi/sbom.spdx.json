@@ -1,35 +1,90 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-fribidi-1.0.16",
+  "name": "SBOM-SPDX-fribidi-1.0.18",
   "creationInfo": {
-    "created": "2026-08-05T22:09:48Z",
+    "created": "2026-11-12T12:51:32Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.13"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/fribidi-1.0.16.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/fribidi-1.0.18.json",
   "documentDescribes": [
-    "SPDXRef-Archive-fribidi-src"
+    "SPDXRef-Archive-fribidi-src",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-fribidi"
   ],
-  "files": [],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-fribidi",
+      "fileName": "fribidi-1.0.18.tar.xz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1de5e8073d035388b71d0b2d452b1da1f8caeea8a7702997b401fe1b6250727f"
+        }
+      ]
+    }
+  ],
   "packages": [
     {
       "SPDXID": "SPDXRef-Archive-fribidi-src",
       "name": "fribidi",
-      "versionInfo": "1.0.16",
+      "versionInfo": "1.0.18",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2024-09-25 18:04:49 UTC",
+      "builtDate": "2026-10-29T22:17:39Z",
       "licenseConcluded": "GPL-2.0-or-later AND LGPL-2.1-or-later",
-      "downloadLocation": "https://github.com/fribidi/fribidi/releases/download/v1.0.16/fribidi-1.0.16.tar.xz",
+      "downloadLocation": "https://github.com/fribidi/fribidi/releases/download/v1.0.18/fribidi-1.0.18.tar.xz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/fribidi@1.0.18",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "1b1cde5b235d40479e91be2f0e88a309e3214c8ab470ec8a2744d82a5a9ea05c"
+          "checksumValue": "1de5e8073d035388b71d0b2d452b1da1f8caeea8a7702997b401fe1b6250727f"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "27.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-fribidi",
+      "name": "fribidi",
+      "versionInfo": "1.0.18",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-10-29T23:14:57Z",
+      "licenseConcluded": "GPL-2.0-or-later AND LGPL-2.1-or-later",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/fribidi/blobs/sha256:8509ef7fdecd81cce30f0831067a8f33453f836ec560a73809ccef32d6a8e1b6",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/fribidi@1.0.18",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "8509ef7fdecd81cce30f0831067a8f33453f836ec560a73809ccef32d6a8e1b6"
         }
       ]
     }
@@ -38,6 +93,11 @@
     {
       "spdxElementId": "SPDXRef-File-fribidi",
       "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-fribidi-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-Archive-fribidi-src"
     }
   ]

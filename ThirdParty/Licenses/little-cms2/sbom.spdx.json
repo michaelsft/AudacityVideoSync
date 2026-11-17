@@ -1,35 +1,282 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-little-cms2-2.19",
+  "name": "SBOM-SPDX-little-cms2-2.20",
   "creationInfo": {
-    "created": "2026-08-05T22:09:58Z",
+    "created": "2026-11-12T12:51:18Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.13"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/little-cms2-2.19.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/little-cms2-2.20.json",
   "documentDescribes": [
-    "SPDXRef-Archive-little-cms2-src"
+    "SPDXRef-Archive-little-cms2-src",
+    "SPDXRef-Package-SPDXRef-jpeg-turbo-3.2e.2.2e.1",
+    "SPDXRef-Package-SPDXRef-giflib-6.2e.1.2e.3",
+    "SPDXRef-Package-SPDXRef-libpng-1.2e.6.2e.59",
+    "SPDXRef-Package-SPDXRef-webp-1.2e.6.2e.0",
+    "SPDXRef-Package-SPDXRef-xz-5.2e.8.2e.4",
+    "SPDXRef-Package-SPDXRef-lz4-1.2e.11.2e.1",
+    "SPDXRef-Package-SPDXRef-zstd-1.2e.5.2e.7.5f.1",
+    "SPDXRef-Package-SPDXRef-libtiff-4.2e.7.2e.2",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-little-cms2"
   ],
-  "files": [],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-little-cms2",
+      "fileName": "lcms2-2.20.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "18ff5504fa9cc8a2b1f3591180d90ead16c8a2ea78e530523b46eab70e1ca6b9"
+        }
+      ]
+    }
+  ],
   "packages": [
     {
       "SPDXID": "SPDXRef-Archive-little-cms2-src",
       "name": "little-cms2",
-      "versionInfo": "2.19",
+      "versionInfo": "2.20",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-04-24T09:17:40Z",
+      "builtDate": "2026-10-31T16:05:01Z",
       "licenseConcluded": "MIT",
-      "downloadLocation": "https://downloads.sourceforge.net/project/lcms/lcms/2.19/lcms2-2.19.tar.gz",
+      "downloadLocation": "https://downloads.sourceforge.net/project/lcms/lcms/2.20/lcms2-2.20.tar.gz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/little-cms2@2.20",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "49e7e134e4299733dd0eda434fa468997a28ab3d33fa397c642b03644f552216"
+          "checksumValue": "18ff5504fa9cc8a2b1f3591180d90ead16c8a2ea78e530523b46eab70e1ca6b9"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-jpeg-turbo-3.2e.2.2e.1",
+      "name": "jpeg-turbo",
+      "versionInfo": "3.2.1",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "IJG AND Zlib AND BSD-3-Clause",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/jpeg-turbo/blobs/sha256:3f245f1914445713bba97fbee6b4f7cb379b4e9c91237d12e76ee52c1975ce0e",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "3f245f1914445713bba97fbee6b4f7cb379b4e9c91237d12e76ee52c1975ce0e"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/jpeg-turbo@3.2.1",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-giflib-6.2e.1.2e.3",
+      "name": "giflib",
+      "versionInfo": "6.1.3",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/giflib/blobs/sha256:bdf5a53f053c10c716573cf955e5f50d704d97f9d2dedc781161031744b77849",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "bdf5a53f053c10c716573cf955e5f50d704d97f9d2dedc781161031744b77849"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/giflib@6.1.3",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-libpng-1.2e.6.2e.59",
+      "name": "libpng",
+      "versionInfo": "1.6.59",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "libpng-2.0",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libpng/blobs/sha256:7e04225ac0bc048d2b12c603f678e5fa36459909812f2f1306dbd97af337cdec",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e04225ac0bc048d2b12c603f678e5fa36459909812f2f1306dbd97af337cdec"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/libpng@1.6.59",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-webp-1.2e.6.2e.0",
+      "name": "webp",
+      "versionInfo": "1.6.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "BSD-3-Clause",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/webp/blobs/sha256:85d3cb86c87f53f027b48cdfe15a31e82932caa43344a6fe06e00e5de402a3e7",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "85d3cb86c87f53f027b48cdfe15a31e82932caa43344a6fe06e00e5de402a3e7"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/webp@1.6.0",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-xz-5.2e.8.2e.4",
+      "name": "xz",
+      "versionInfo": "5.8.4",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "0BSD AND GPL-2.0-or-later",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:b2b5d6523153be05c20bcc51cd358ea3dd1f4bf893748fdedb779ab508ea63ce",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2b5d6523153be05c20bcc51cd358ea3dd1f4bf893748fdedb779ab508ea63ce"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/xz@5.8.4",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-lz4-1.2e.11.2e.1",
+      "name": "lz4",
+      "versionInfo": "1.11.1",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "BSD-2-Clause",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:b2422bda202e4a59007a9189493902ac7a75423640081da43de9281a89770d5c",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2422bda202e4a59007a9189493902ac7a75423640081da43de9281a89770d5c"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/lz4@1.11.1",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-zstd-1.2e.5.2e.7.5f.1",
+      "name": "zstd",
+      "versionInfo": "1.5.7_1",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "(BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:7fb4af03304cc4897326168cdcd53290311c5543150f5502a61c3e84b6d62765",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7fb4af03304cc4897326168cdcd53290311c5543150f5502a61c3e84b6d62765"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/zstd@1.5.7_1",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-libtiff-4.2e.7.2e.2",
+      "name": "libtiff",
+      "versionInfo": "4.7.2",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "libtiff",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libtiff/blobs/sha256:2678f5bb80b0578e79c76f747b637781ab3629b0c393e8c7d060ead4d42f9d6c",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "2678f5bb80b0578e79c76f747b637781ab3629b0c393e8c7d060ead4d42f9d6c"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/libtiff@4.7.2",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "27.2",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-little-cms2",
+      "name": "little-cms2",
+      "versionInfo": "2.20",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-11-12T02:04:56Z",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/little-cms2/blobs/sha256:95b216343a5dce73473576b9ac02283944cf293b0817b48be2d8c19ba78b4cc9",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/little-cms2@2.20",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "95b216343a5dce73473576b9ac02283944cf293b0817b48be2d8c19ba78b4cc9"
         }
       ]
     }
@@ -38,6 +285,51 @@
     {
       "spdxElementId": "SPDXRef-File-little-cms2",
       "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-little-cms2-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-jpeg-turbo-3.2e.2.2e.1",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-giflib-6.2e.1.2e.3",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-libpng-1.2e.6.2e.59",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-webp-1.2e.6.2e.0",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-xz-5.2e.8.2e.4",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-lz4-1.2e.11.2e.1",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-zstd-1.2e.5.2e.7.5f.1",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-libtiff-4.2e.7.2e.2",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-little-cms2"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-Archive-little-cms2-src"
     }
   ]

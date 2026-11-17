@@ -1,35 +1,90 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-libvpx-1.16.0",
+  "name": "SBOM-SPDX-libvpx-1.17.0",
   "creationInfo": {
-    "created": "2026-08-05T22:09:37Z",
+    "created": "2026-09-22T16:03:47Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.4"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/libvpx-1.16.0.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/libvpx-1.17.0.json",
   "documentDescribes": [
-    "SPDXRef-Archive-libvpx-src"
+    "SPDXRef-Archive-libvpx-src",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-libvpx"
   ],
-  "files": [],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-libvpx",
+      "fileName": "v1.17.0.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "1020f184046187baa2985dbde38e0691f49c44088bca7a1842b0236c6081dc0a"
+        }
+      ]
+    }
+  ],
   "packages": [
     {
       "SPDXID": "SPDXRef-Archive-libvpx-src",
       "name": "libvpx",
-      "versionInfo": "1.16.0",
+      "versionInfo": "1.17.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-01-08 16:01:40 UTC",
+      "builtDate": "2026-08-20T19:06:35Z",
       "licenseConcluded": "BSD-3-Clause",
-      "downloadLocation": "https://github.com/webmproject/libvpx/archive/refs/tags/v1.16.0.tar.gz",
+      "downloadLocation": "https://github.com/webmproject/libvpx/archive/refs/tags/v1.17.0.tar.gz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/libvpx@1.17.0",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7a479a3c66b9f5d5542a4c6a1b7d3768a983b1e5c14c60a9396edc9b649e015c"
+          "checksumValue": "1020f184046187baa2985dbde38e0691f49c44088bca7a1842b0236c6081dc0a"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "27.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-libvpx",
+      "name": "libvpx",
+      "versionInfo": "1.17.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-09-20T14:53:30Z",
+      "licenseConcluded": "BSD-3-Clause",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libvpx/blobs/sha256:f9a11c2c10694acd896b66b09697b159cb82f5552837603cbb90366049562572",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/libvpx@1.17.0",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "f9a11c2c10694acd896b66b09697b159cb82f5552837603cbb90366049562572"
         }
       ]
     }
@@ -38,6 +93,11 @@
     {
       "spdxElementId": "SPDXRef-File-libvpx",
       "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-libvpx-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-Archive-libvpx-src"
     }
   ]

@@ -6,8 +6,8 @@ REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 OUTPUT_DIR="$REPO_ROOT/ThirdParty/Licenses"
 
 FORMULAE=(
-    mpv ffmpeg dav1d lame libvmaf libvpx openssl@3 opus svt-av1 x264 x265
-    jpeg-turbo libarchive libb2 lz4 xz zstd libass libpng freetype fribidi
+    mpv ffmpeg dav1d lame libvmaf libvpx openssl@4 opus svt-av1 x264 x265
+    jpeg-turbo libarchive libb2 lz4 xz zstd brotli libass libpng freetype fribidi
     gettext fontconfig pcre2 glib graphite2 harfbuzz libunibreak libbluray
     libudfread little-cms2 shaderc vulkan-loader libplacebo luajit mujs
     libsamplerate mpg123 rubberband uchardet zimg

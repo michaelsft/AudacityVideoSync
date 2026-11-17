@@ -1,35 +1,90 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-lz4-1.10.0",
+  "name": "SBOM-SPDX-lz4-1.11.1",
   "creationInfo": {
-    "created": "2026-08-05T22:09:48Z",
+    "created": "2026-11-12T12:51:04Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.13"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/lz4-1.10.0.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/lz4-1.11.1.json",
   "documentDescribes": [
-    "SPDXRef-Archive-lz4-src"
+    "SPDXRef-Archive-lz4-src",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-lz4"
   ],
-  "files": [],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-lz4",
+      "fileName": "v1.11.1.tar.gz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "683fed08a844ad012196381e40badf80c0bbe4962959761416d41c9e67d77ec7"
+        }
+      ]
+    }
+  ],
   "packages": [
     {
       "SPDXID": "SPDXRef-Archive-lz4-src",
       "name": "lz4",
-      "versionInfo": "1.10.0",
+      "versionInfo": "1.11.1",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2024-07-21 17:29:49 UTC",
+      "builtDate": "2026-11-10T05:21:42Z",
       "licenseConcluded": "BSD-2-Clause",
-      "downloadLocation": "https://github.com/lz4/lz4/archive/refs/tags/v1.10.0.tar.gz",
+      "downloadLocation": "https://github.com/lz4/lz4/archive/refs/tags/v1.11.1.tar.gz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/lz4@1.11.1",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "537512904744b35e232912055ccf8ec66d768639ff3abe5788d90d792ec5f48b"
+          "checksumValue": "683fed08a844ad012196381e40badf80c0bbe4962959761416d41c9e67d77ec7"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "27.2",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-lz4",
+      "name": "lz4",
+      "versionInfo": "1.11.1",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-11-10T08:24:30Z",
+      "licenseConcluded": "BSD-2-Clause",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:b2422bda202e4a59007a9189493902ac7a75423640081da43de9281a89770d5c",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/lz4@1.11.1",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "b2422bda202e4a59007a9189493902ac7a75423640081da43de9281a89770d5c"
         }
       ]
     }
@@ -38,6 +93,11 @@
     {
       "spdxElementId": "SPDXRef-File-lz4",
       "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-lz4-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-Archive-lz4-src"
     }
   ]

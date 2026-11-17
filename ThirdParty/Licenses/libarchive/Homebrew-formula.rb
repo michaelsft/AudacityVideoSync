@@ -1,8 +1,8 @@
 class Libarchive < Formula
   desc "Multi-format archive and compression library"
   homepage "https://www.libarchive.org"
-  url "https://www.libarchive.org/downloads/libarchive-3.8.9.tar.xz"
-  sha256 "888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde"
+  url "https://www.libarchive.org/downloads/libarchive-3.8.11.tar.xz"
+  sha256 "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2"
   license "BSD-2-Clause"
   compatibility_version 1
 
@@ -22,8 +22,11 @@ class Libarchive < Formula
   uses_from_macos "expat"
 
   on_linux do
+    depends_on "acl"
     depends_on "zlib-ng-compat"
   end
+
+  deny_network_access!
 
   def install
     args = [

@@ -1,10 +1,10 @@
 class LittleCms2 < Formula
   desc "Color management engine supporting ICC profiles"
   homepage "https://www.littlecms.com/"
-  # Ensure release is announced at https://www.littlecms.com/categories/releases/
-  # (or https://www.littlecms.com/blog/)
-  url "https://downloads.sourceforge.net/project/lcms/lcms/2.19/lcms2-2.19.tar.gz"
-  sha256 "49e7e134e4299733dd0eda434fa468997a28ab3d33fa397c642b03644f552216"
+  # Ensure release is announced at https://sourceforge.net/p/lcms/mailman/lcms-user/
+  # Ref: https://github.com/mm2/Little-CMS/issues/569#issuecomment-4414911319
+  url "https://downloads.sourceforge.net/project/lcms/lcms/2.20/lcms2-2.20.tar.gz"
+  sha256 "18ff5504fa9cc8a2b1f3591180d90ead16c8a2ea78e530523b46eab70e1ca6b9"
   license "MIT"
   version_scheme 1
   compatibility_version 1
@@ -20,6 +20,8 @@ class LittleCms2 < Formula
 
   depends_on "jpeg-turbo"
   depends_on "libtiff"
+
+  deny_network_access!
 
   def install
     system "./configure", *std_configure_args

@@ -1,15 +1,15 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-shaderc-2026.3",
+  "name": "SBOM-SPDX-shaderc-2026.4",
   "creationInfo": {
-    "created": "2026-08-05T22:09:58Z",
+    "created": "2026-09-22T16:03:50Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.4"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/shaderc-2026.3.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/shaderc-2026.4.json",
   "documentDescribes": [
     "SPDXRef-Archive-shaderc-src",
     "SPDXRef-Compiler",
@@ -18,11 +18,11 @@
   "files": [
     {
       "SPDXID": "SPDXRef-File-shaderc",
-      "fileName": "v2026.3.tar.gz",
+      "fileName": "v2026.4.tar.gz",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ee493ccf1b3038b4ef2fe024664c5eb2dc4bcc1f6b05b33e3909de0e19c81024"
+          "checksumValue": "f06ce5bcca94e5df7f34e115743597d0ad2e13c5fe9213c67dc8c76031241947"
         }
       ]
     }
@@ -31,25 +31,31 @@
     {
       "SPDXID": "SPDXRef-Archive-shaderc-src",
       "name": "shaderc",
-      "versionInfo": "2026.3",
+      "versionInfo": "2026.4",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-16T15:11:57Z",
+      "builtDate": "2026-09-11T18:56:39Z",
       "licenseConcluded": "Apache-2.0",
-      "downloadLocation": "https://github.com/google/shaderc/archive/refs/tags/v2026.3.tar.gz",
+      "downloadLocation": "https://github.com/google/shaderc/archive/refs/tags/v2026.4.tar.gz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/shaderc@2026.4",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "ee493ccf1b3038b4ef2fe024664c5eb2dc4bcc1f6b05b33e3909de0e19c81024"
+          "checksumValue": "f06ce5bcca94e5df7f34e115743597d0ad2e13c5fe9213c67dc8c76031241947"
         }
       ]
     },
     {
       "SPDXID": "SPDXRef-Compiler",
       "name": "clang",
-      "versionInfo": "26.4",
+      "versionInfo": "27.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "NOASSERTION",
@@ -61,24 +67,24 @@
     {
       "SPDXID": "SPDXRef-Bottle-shaderc",
       "name": "shaderc",
-      "versionInfo": "2026.3",
+      "versionInfo": "2026.4",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-17T03:12:27Z",
+      "builtDate": "2026-09-12T00:26:28Z",
       "licenseConcluded": "Apache-2.0",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/shaderc/blobs/sha256:7040868fd148b36391a8be834c7d4ab8b9d3920256fd4a56c5cc78ef5276f3ee",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/shaderc/blobs/sha256:463549d39c59ba245f05379667d89e83f223f1b035226926534fc28ede01455e",
       "copyrightText": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:brew/shaderc@2026.3",
+          "referenceLocator": "pkg:brew/shaderc@2026.4",
           "referenceType": "purl"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "7040868fd148b36391a8be834c7d4ab8b9d3920256fd4a56c5cc78ef5276f3ee"
+          "checksumValue": "463549d39c59ba245f05379667d89e83f223f1b035226926534fc28ede01455e"
         }
       ]
     }

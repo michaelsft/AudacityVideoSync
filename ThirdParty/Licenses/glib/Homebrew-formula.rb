@@ -3,10 +3,18 @@ class Glib < Formula
 
   desc "Core application library for C"
   homepage "https://docs.gtk.org/glib/"
-  url "https://download.gnome.org/sources/glib/2.88/glib-2.88.3.tar.xz"
-  sha256 "ab24d24e698dfa1e408b7bcdb508f4aafc906185a8b8ce72fdf79bbbdc9b383b"
+  url "https://download.gnome.org/sources/glib/2.90/glib-2.90.1.tar.xz"
+  sha256 "93c941aa17d5eb1d53fe838365f29a8b4e539c222a256d974ec8f30fc413e396"
   license "LGPL-2.1-or-later"
   compatibility_version 1
+
+  # This regex is intended to avoid the `Gnome` strategy's version filtering
+  # logic while maintaining the "even-numbered minor is stable" behavior, as
+  # minor versions >= 90 are still stable in this case.
+  livecheck do
+    url :stable
+    regex(/glib[._-]v?(\d+\.\d*[02468](?:\.\d+)*)\.t/i)
+  end
 
   depends_on "bison" => :build # for gobject-introspection
   depends_on "gettext" => :build
@@ -14,7 +22,7 @@ class Glib < Formula
   depends_on "ninja" => :build
   depends_on "pkgconf" => [:build, :test]
   depends_on "python-setuptools" => :build # for gobject-introspection
-  depends_on "python@3.14" => :build
+  depends_on "python@3.15" => :build
   depends_on "pcre2"
 
   uses_from_macos "flex" => :build # for gobject-introspection
@@ -53,6 +61,8 @@ class Glib < Formula
   patch do
     file "Patches/glib/hardcoded-paths.diff"
   end
+
+  deny_network_access!
 
   def install
     # Avoid the sandbox violation when an empty directory is created outside of the formula prefix.
@@ -105,17 +115,16 @@ class Glib < Formula
 
     # `pkg-config --libs glib-2.0` includes -lintl, and gettext itself does not
     # have a pkgconfig file, so we add gettext lib and include paths here.
-    gettext = Formula["gettext"]
     inreplace lib/"pkgconfig/glib-2.0.pc" do |s|
       s.gsub! "Libs: -L${libdir} -lglib-2.0 -lintl",
-              "Libs: -L${libdir} -lglib-2.0 -L#{gettext.opt_lib} -lintl"
+              "Libs: -L${libdir} -lglib-2.0 -L#{formula_opt_lib("gettext")} -lintl"
       s.gsub! "Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include",
-              "Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include -I#{gettext.opt_include}"
+              "Cflags: -I${includedir}/glib-2.0 -I${libdir}/glib-2.0/include -I#{formula_opt_include("gettext")}"
     end
   end
 
   post_install_steps do
-    mkdir_p "lib/gio/modules", base: :homebrew_prefix
+    mkdir_p "{{HOMEBREW_PREFIX}}/lib/gio/modules"
   end
 
   test do

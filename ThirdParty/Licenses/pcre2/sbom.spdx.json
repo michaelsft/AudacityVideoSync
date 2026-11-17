@@ -1,35 +1,90 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-pcre2-10.47",
+  "name": "SBOM-SPDX-pcre2-10.49",
   "creationInfo": {
-    "created": "2026-08-05T22:09:53Z",
+    "created": "2026-11-01T21:42:17Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.11"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/pcre2-10.47.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/pcre2-10.49.json",
   "documentDescribes": [
-    "SPDXRef-Archive-pcre2-src"
+    "SPDXRef-Archive-pcre2-src",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-pcre2"
   ],
-  "files": [],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-pcre2",
+      "fileName": "pcre2-10.49.tar.bz2",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "53c156e1ba416a20da8e65395daa132da0d80e76910424caca3fcdae7831d384"
+        }
+      ]
+    }
+  ],
   "packages": [
     {
       "SPDXID": "SPDXRef-Archive-pcre2-src",
       "name": "pcre2",
-      "versionInfo": "10.47",
+      "versionInfo": "10.49",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2025-10-20 11:35:08 UTC",
+      "builtDate": "2026-09-28T12:02:27Z",
       "licenseConcluded": "BSD-3-Clause",
-      "downloadLocation": "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.47/pcre2-10.47.tar.bz2",
+      "downloadLocation": "https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.49/pcre2-10.49.tar.bz2",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/pcre2@10.49",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "47fe8c99461250d42f89e6e8fdaeba9da057855d06eb7fc08d9ca03fd08d7bc7"
+          "checksumValue": "53c156e1ba416a20da8e65395daa132da0d80e76910424caca3fcdae7831d384"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "27.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-pcre2",
+      "name": "pcre2",
+      "versionInfo": "10.49",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-09-28T14:57:52Z",
+      "licenseConcluded": "BSD-3-Clause",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/pcre2/blobs/sha256:5cac44323243138490ca74a2499fd347fa836df6b5fffa789944be12110e91ff",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/pcre2@10.49",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "5cac44323243138490ca74a2499fd347fa836df6b5fffa789944be12110e91ff"
         }
       ]
     }
@@ -38,6 +93,11 @@
     {
       "spdxElementId": "SPDXRef-File-pcre2",
       "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-pcre2-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-Archive-pcre2-src"
     }
   ]

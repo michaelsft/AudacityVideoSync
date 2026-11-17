@@ -1,35 +1,138 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-freetype-2.14.3",
+  "name": "SBOM-SPDX-freetype-2.15.0",
   "creationInfo": {
-    "created": "2026-08-05T22:09:48Z",
+    "created": "2026-11-01T21:42:16Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.11"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/freetype-2.14.3.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/freetype-2.15.0.json",
   "documentDescribes": [
-    "SPDXRef-Archive-freetype-src"
+    "SPDXRef-Archive-freetype-src",
+    "SPDXRef-Package-SPDXRef-brotli-1.2e.2.2e.0",
+    "SPDXRef-Package-SPDXRef-libpng-1.2e.6.2e.59",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-freetype"
   ],
-  "files": [],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-freetype",
+      "fileName": "freetype-2.15.0.tar.xz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5"
+        }
+      ]
+    }
+  ],
   "packages": [
     {
       "SPDXID": "SPDXRef-Archive-freetype-src",
       "name": "freetype",
-      "versionInfo": "2.14.3",
+      "versionInfo": "2.15.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-03-22 15:10:54 UTC",
+      "builtDate": "2026-10-11T20:47:22Z",
       "licenseConcluded": "FTL",
-      "downloadLocation": "https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz",
+      "downloadLocation": "https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/freetype@2.15.0",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f"
+          "checksumValue": "93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-brotli-1.2e.2.2e.0",
+      "name": "brotli",
+      "versionInfo": "1.2.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "MIT",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/brotli/blobs/sha256:4344732ad26e00a3a397dafee2e87ca1b4210e8605c24aefa9bf8ea3fc5f271a",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "4344732ad26e00a3a397dafee2e87ca1b4210e8605c24aefa9bf8ea3fc5f271a"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/brotli@1.2.0",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Package-SPDXRef-libpng-1.2e.6.2e.59",
+      "name": "libpng",
+      "versionInfo": "1.6.59",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "libpng-2.0",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libpng/blobs/sha256:7e04225ac0bc048d2b12c603f678e5fa36459909812f2f1306dbd97af337cdec",
+      "copyrightText": "NOASSERTION",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e04225ac0bc048d2b12c603f678e5fa36459909812f2f1306dbd97af337cdec"
+        }
+      ],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/libpng@1.6.59",
+          "referenceType": "purl"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "27.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-freetype",
+      "name": "freetype",
+      "versionInfo": "2.15.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-10-13T10:09:06Z",
+      "licenseConcluded": "FTL",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/freetype/blobs/sha256:e95cd1f10672199f21f824b4f8a848c3a4f733df2fcd6e3d88b08446131eeed3",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/freetype@2.15.0",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "e95cd1f10672199f21f824b4f8a848c3a4f733df2fcd6e3d88b08446131eeed3"
         }
       ]
     }
@@ -38,6 +141,21 @@
     {
       "spdxElementId": "SPDXRef-File-freetype",
       "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-freetype-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-brotli-1.2e.2.2e.0",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-freetype"
+    },
+    {
+      "spdxElementId": "SPDXRef-Package-SPDXRef-libpng-1.2e.6.2e.59",
+      "relationshipType": "RUNTIME_DEPENDENCY_OF",
+      "relatedSpdxElement": "SPDXRef-Bottle-freetype"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-Archive-freetype-src"
     }
   ]

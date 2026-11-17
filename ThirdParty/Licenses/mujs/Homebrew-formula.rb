@@ -1,10 +1,10 @@
 class Mujs < Formula
   desc "Embeddable Javascript interpreter"
   homepage "https://www.mujs.com/"
-  url "https://mujs.com/downloads/mujs-1.3.9.tar.gz"
-  sha256 "956d5a20dd4efe5aa58673558787b9e2539255f9bf62585e90e1921fa040d89d"
+  url "https://mujs.com/downloads/mujs-1.3.11.tar.gz"
+  sha256 "456a395769daf110a30f9bf6f793044261e261481d5dca33b63cdc8714774ca4"
   license "ISC"
-  compatibility_version 1
+  compatibility_version 3
   head "https://codeberg.org/ccxvii/mujs.git", branch: "master"
 
   livecheck do
@@ -18,10 +18,12 @@ class Mujs < Formula
     depends_on "readline"
   end
 
-  # update build for `utfdata.h`, upstream pr ref, https://github.com/ccxvii/mujs/pull/203
+  # update build for `utfdata.h`
   patch do
     url "https://github.com/ccxvii/mujs/commit/e21c6bfdce374e19800f2455f45828a90fce39da.patch?full_index=1"
     sha256 "e10de8b9c3a62ffe121b61fe60b67ba8faa68eaace9a3b17a13f46a2cc795a11"
+    type :unofficial
+    resolves "https://github.com/ccxvii/mujs/pull/203"
   end
 
   def install

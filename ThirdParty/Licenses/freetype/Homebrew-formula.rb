@@ -1,9 +1,9 @@
 class Freetype < Formula
   desc "Software library to render fonts"
   homepage "https://www.freetype.org/"
-  url "https://downloads.sourceforge.net/project/freetype/freetype2/2.14.3/freetype-2.14.3.tar.xz"
-  mirror "https://download.savannah.gnu.org/releases/freetype/freetype-2.14.3.tar.xz"
-  sha256 "36bc4f1cc413335368ee656c42afca65c5a3987e8768cc28cf11ba775e785a5f"
+  url "https://downloads.sourceforge.net/project/freetype/freetype2/2.15.0/freetype-2.15.0.tar.xz"
+  mirror "https://download.savannah.gnu.org/releases/freetype/freetype-2.15.0.tar.xz"
+  sha256 "93cd47eb719c325107f2d3cf087d06299e944c3b48a40b55537302304dea1dd5"
   license "FTL"
   compatibility_version 1
 
@@ -13,6 +13,7 @@ class Freetype < Formula
   end
 
   depends_on "pkgconf" => :build
+  depends_on "brotli"
   depends_on "libpng"
 
   uses_from_macos "bzip2"
@@ -21,6 +22,8 @@ class Freetype < Formula
     depends_on "zlib-ng-compat"
   end
 
+  deny_network_access!
+
   def install
     # This file will be installed to bindir, so we want to avoid embedding the
     # absolute path to the pkg-config shim.
@@ -28,6 +31,7 @@ class Freetype < Formula
 
     system "./configure", "--prefix=#{prefix}",
                           "--enable-freetype-config",
+                          "--with-brotli",
                           "--without-harfbuzz"
     system "make"
     system "make", "install"

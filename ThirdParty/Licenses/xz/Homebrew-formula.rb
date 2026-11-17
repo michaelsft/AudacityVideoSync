@@ -1,10 +1,10 @@
 class Xz < Formula
   desc "General-purpose data compression with high compression ratio"
   homepage "https://tukaani.org/xz/"
-  url "https://github.com/tukaani-project/xz/releases/download/v5.8.3/xz-5.8.3.tar.gz"
-  mirror "https://downloads.sourceforge.net/project/lzmautils/xz-5.8.3.tar.gz"
-  mirror "http://downloads.sourceforge.net/project/lzmautils/xz-5.8.3.tar.gz"
-  sha256 "3d3a1b973af218114f4f889bbaa2f4c037deaae0c8e815eec381c3d546b974a0"
+  url "https://github.com/tukaani-project/xz/releases/download/v5.8.4/xz-5.8.4.tar.gz"
+  mirror "https://downloads.sourceforge.net/project/lzmautils/xz-5.8.4.tar.gz"
+  mirror "http://downloads.sourceforge.net/project/lzmautils/xz-5.8.4.tar.gz"
+  sha256 "0014c7886930454fe8bd4228665b51af55eeae560ea135c9c4cd33f55b2591d9"
   license all_of: [
     "0BSD",
     "GPL-2.0-or-later",
@@ -12,10 +12,10 @@ class Xz < Formula
   version_scheme 1
   compatibility_version 1
 
-  deny_network_access! [:build, :postinstall]
+  deny_network_access!
 
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules", "--disable-nls"
+    system "./configure", "--disable-silent-rules", "--disable-nls", *std_configure_args
     system "make", "check"
     system "make", "install"
   end
@@ -32,17 +32,5 @@ class Xz < Formula
     # decompress: data.txt.xz -> data.txt
     system bin/"xz", "-d", "#{path}.xz"
     assert_equal original_contents, path.read
-
-    # Check that http mirror works
-    xz_tar = testpath/"xz.tar.gz"
-    stable.mirrors.each do |mirror|
-      next if mirror.start_with?("https")
-
-      xz_tar.unlink if xz_tar.exist?
-
-      # Set fake CA Cert to block any HTTPS redirects.
-      system "curl", "--location", mirror, "--cacert", "/fake", "--output", xz_tar
-      assert_equal stable.checksum.hexdigest, xz_tar.sha256
-    end
   end
 end

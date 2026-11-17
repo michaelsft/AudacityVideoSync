@@ -1,29 +1,29 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-vulkan-loader-1.4.357.0",
+  "name": "SBOM-SPDX-vulkan-loader-1.4.363.0",
   "creationInfo": {
-    "created": "2026-08-05T22:09:58Z",
+    "created": "2026-11-12T12:51:25Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.13"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/vulkan-loader-1.4.357.0.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/vulkan-loader-1.4.363.0.json",
   "documentDescribes": [
     "SPDXRef-Archive-vulkan-loader-src",
-    "SPDXRef-Package-SPDXRef-vulkan-headers-1.4.357.0",
+    "SPDXRef-Package-SPDXRef-vulkan-headers-1.4.363.0",
     "SPDXRef-Compiler",
     "SPDXRef-Bottle-vulkan-loader"
   ],
   "files": [
     {
       "SPDXID": "SPDXRef-File-vulkan-loader",
-      "fileName": "vulkan-sdk-1.4.357.0.tar.gz",
+      "fileName": "vulkan-sdk-1.4.363.0.tar.gz",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "54f2537df22313768da0317dda2abdaaab7711b4081c48c869a79db343d0ae70"
+          "checksumValue": "941eff558fc74f248745fb7df367640cf89a8457f216dae498a74ae14b6ba6f7"
         }
       ]
     }
@@ -32,40 +32,46 @@
     {
       "SPDXID": "SPDXRef-Archive-vulkan-loader-src",
       "name": "vulkan-loader",
-      "versionInfo": "1.4.357.0",
+      "versionInfo": "1.4.363.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-17T04:40:32Z",
+      "builtDate": "2026-09-18T16:28:24Z",
       "licenseConcluded": "Apache-2.0",
-      "downloadLocation": "https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/vulkan-sdk-1.4.357.0.tar.gz",
+      "downloadLocation": "https://github.com/KhronosGroup/Vulkan-Loader/archive/refs/tags/vulkan-sdk-1.4.363.0.tar.gz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/vulkan-loader@1.4.363.0",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "54f2537df22313768da0317dda2abdaaab7711b4081c48c869a79db343d0ae70"
+          "checksumValue": "941eff558fc74f248745fb7df367640cf89a8457f216dae498a74ae14b6ba6f7"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-Package-SPDXRef-vulkan-headers-1.4.357.0",
+      "SPDXID": "SPDXRef-Package-SPDXRef-vulkan-headers-1.4.363.0",
       "name": "vulkan-headers",
-      "versionInfo": "1.4.357.0",
+      "versionInfo": "1.4.363.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "Apache-2.0",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/vulkan-headers/blobs/sha256:0fb1c2646ada6cef155a0f358f901f460c778842508ebf42bd1fc853fc8d8525",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/vulkan-headers/blobs/sha256:e29460a3bc874e18e407211f3e550cf60177c6f7614c04d3081beb94d8ad4ab2",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0fb1c2646ada6cef155a0f358f901f460c778842508ebf42bd1fc853fc8d8525"
+          "checksumValue": "e29460a3bc874e18e407211f3e550cf60177c6f7614c04d3081beb94d8ad4ab2"
         }
       ],
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:brew/vulkan-headers@1.4.357.0",
+          "referenceLocator": "pkg:brew/vulkan-headers@1.4.363.0",
           "referenceType": "purl"
         }
       ]
@@ -73,7 +79,7 @@
     {
       "SPDXID": "SPDXRef-Compiler",
       "name": "clang",
-      "versionInfo": "26.6",
+      "versionInfo": "27.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "NOASSERTION",
@@ -85,24 +91,24 @@
     {
       "SPDXID": "SPDXRef-Bottle-vulkan-loader",
       "name": "vulkan-loader",
-      "versionInfo": "1.4.357.0",
+      "versionInfo": "1.4.363.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-28T20:14:38Z",
+      "builtDate": "2026-09-29T02:46:51Z",
       "licenseConcluded": "Apache-2.0",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/vulkan-loader/blobs/sha256:fcca79db1d905b8d119ac29f172e3fa4c2a5a9928eee5865e11131492d7f1f67",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/vulkan-loader/blobs/sha256:65ddf6c37607565edcc225cb6b0e7ae3d46b3b0f55e961d35edfad322e72e4bf",
       "copyrightText": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:brew/vulkan-loader@1.4.357.0",
+          "referenceLocator": "pkg:brew/vulkan-loader@1.4.363.0",
           "referenceType": "purl"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "fcca79db1d905b8d119ac29f172e3fa4c2a5a9928eee5865e11131492d7f1f67"
+          "checksumValue": "65ddf6c37607565edcc225cb6b0e7ae3d46b3b0f55e961d35edfad322e72e4bf"
         }
       ]
     }
@@ -114,7 +120,7 @@
       "relatedSpdxElement": "SPDXRef-Archive-vulkan-loader-src"
     },
     {
-      "spdxElementId": "SPDXRef-Package-SPDXRef-vulkan-headers-1.4.357.0",
+      "spdxElementId": "SPDXRef-Package-SPDXRef-vulkan-headers-1.4.363.0",
       "relationshipType": "RUNTIME_DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-Bottle-vulkan-loader"
     },

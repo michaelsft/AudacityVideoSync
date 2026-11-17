@@ -1,35 +1,90 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-libpng-1.6.58",
+  "name": "SBOM-SPDX-libpng-1.6.59",
   "creationInfo": {
-    "created": "2026-08-05T22:09:48Z",
+    "created": "2026-11-01T21:42:15Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.11"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/libpng-1.6.58.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/libpng-1.6.59.json",
   "documentDescribes": [
-    "SPDXRef-Archive-libpng-src"
+    "SPDXRef-Archive-libpng-src",
+    "SPDXRef-Compiler",
+    "SPDXRef-Bottle-libpng"
   ],
-  "files": [],
+  "files": [
+    {
+      "SPDXID": "SPDXRef-File-libpng",
+      "fileName": "libpng-1.6.59.tar.xz",
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "d80dd2a38a37f803cb9b6ac7b14bd6e74ddc3b654780a8380bdf93523fdb4389"
+        }
+      ]
+    }
+  ],
   "packages": [
     {
       "SPDXID": "SPDXRef-Archive-libpng-src",
       "name": "libpng",
-      "versionInfo": "1.6.58",
+      "versionInfo": "1.6.59",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-04-15T17:23:26Z",
+      "builtDate": "2026-09-28T20:58:10Z",
       "licenseConcluded": "libpng-2.0",
-      "downloadLocation": "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.58/libpng-1.6.58.tar.xz",
+      "downloadLocation": "https://downloads.sourceforge.net/project/libpng/libpng16/1.6.59/libpng-1.6.59.tar.xz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/libpng@1.6.59",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "28eb403f51f0f7405249132cecfe82ea5c0ef97f1b32c5a65828814ae0d34775"
+          "checksumValue": "d80dd2a38a37f803cb9b6ac7b14bd6e74ddc3b654780a8380bdf93523fdb4389"
+        }
+      ]
+    },
+    {
+      "SPDXID": "SPDXRef-Compiler",
+      "name": "clang",
+      "versionInfo": "27.0",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "licenseConcluded": "NOASSERTION",
+      "copyrightText": "NOASSERTION",
+      "downloadLocation": "NOASSERTION",
+      "checksums": [],
+      "externalRefs": []
+    },
+    {
+      "SPDXID": "SPDXRef-Bottle-libpng",
+      "name": "libpng",
+      "versionInfo": "1.6.59",
+      "filesAnalyzed": false,
+      "licenseDeclared": "NOASSERTION",
+      "builtDate": "2026-09-30T20:45:53Z",
+      "licenseConcluded": "libpng-2.0",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libpng/blobs/sha256:7e04225ac0bc048d2b12c603f678e5fa36459909812f2f1306dbd97af337cdec",
+      "copyrightText": "NOASSERTION",
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/libpng@1.6.59",
+          "referenceType": "purl"
+        }
+      ],
+      "checksums": [
+        {
+          "algorithm": "SHA256",
+          "checksumValue": "7e04225ac0bc048d2b12c603f678e5fa36459909812f2f1306dbd97af337cdec"
         }
       ]
     }
@@ -38,6 +93,11 @@
     {
       "spdxElementId": "SPDXRef-File-libpng",
       "relationshipType": "PACKAGE_OF",
+      "relatedSpdxElement": "SPDXRef-Archive-libpng-src"
+    },
+    {
+      "spdxElementId": "SPDXRef-Compiler",
+      "relationshipType": "BUILD_TOOL_OF",
       "relatedSpdxElement": "SPDXRef-Archive-libpng-src"
     }
   ]

@@ -1,15 +1,20 @@
 class Libvpx < Formula
   desc "VP8/VP9 video codec"
   homepage "https://www.webmproject.org/code/"
-  url "https://github.com/webmproject/libvpx/archive/refs/tags/v1.16.0.tar.gz"
-  sha256 "7a479a3c66b9f5d5542a4c6a1b7d3768a983b1e5c14c60a9396edc9b649e015c"
+  url "https://github.com/webmproject/libvpx/archive/refs/tags/v1.17.0.tar.gz"
+  sha256 "1020f184046187baa2985dbde38e0691f49c44088bca7a1842b0236c6081dc0a"
   license "BSD-3-Clause"
   compatibility_version 1
   head "https://chromium.googlesource.com/webm/libvpx.git", branch: "main"
 
   on_intel do
-    depends_on "yasm" => :build
+    depends_on "nasm" => :build
   end
+
+  # Add Golden Gate support. Remove patch when supported in a released version.
+  patch :DATA
+
+  deny_network_access!
 
   def install
     ENV.runtime_cpu_detection
@@ -42,3 +47,47 @@ class Libvpx < Formula
     system "ar", "-x", "#{lib}/libvpx.a"
   end
 end
+
+__END__
+diff --git a/build/make/configure.sh b/build/make/configure.sh
+index b37b998..e44b41a 100644
+--- a/build/make/configure.sh
++++ b/build/make/configure.sh
+@@ -832,7 +832,7 @@ process_common_toolchain() {
+         tgt_isa=x86_64
+         tgt_os=`echo $gcctarget | sed 's/.*\(darwin1[0-9]\).*/\1/'`
+         ;;
+-      *darwin2[0-5]*)
++      *darwin2[0-7]*)
+         tgt_isa=`uname -m`
+         tgt_os=`echo $gcctarget | sed 's/.*\(darwin2[0-9]\).*/\1/'`
+         ;;
+@@ -991,7 +991,7 @@ EOF
+       add_cflags  "-mmacosx-version-min=10.15"
+       add_ldflags "-mmacosx-version-min=10.15"
+       ;;
+-    *-darwin2[0-5]-*)
++    *-darwin2[0-7]-*)
+       add_cflags  "-arch ${toolchain%%-*}"
+       add_ldflags "-arch ${toolchain%%-*}"
+       ;;
+diff --git a/configure b/configure
+index 9e9d80b..6722e99 100755
+--- a/configure
++++ b/configure
+@@ -105,6 +105,7 @@ all_platforms="${all_platforms} arm64-darwin22-gcc"
+ all_platforms="${all_platforms} arm64-darwin23-gcc"
+ all_platforms="${all_platforms} arm64-darwin24-gcc"
+ all_platforms="${all_platforms} arm64-darwin25-gcc"
++all_platforms="${all_platforms} arm64-darwin27-gcc"
+ all_platforms="${all_platforms} arm64-linux-gcc"
+ all_platforms="${all_platforms} arm64-win64-gcc"
+ all_platforms="${all_platforms} arm64-win64-vs15"
+@@ -174,6 +175,7 @@ all_platforms="${all_platforms} x86_64-darwin22-gcc"
+ all_platforms="${all_platforms} x86_64-darwin23-gcc"
+ all_platforms="${all_platforms} x86_64-darwin24-gcc"
+ all_platforms="${all_platforms} x86_64-darwin25-gcc"
++all_platforms="${all_platforms} x86_64-darwin27-gcc"
+ all_platforms="${all_platforms} x86_64-iphonesimulator-gcc"
+ all_platforms="${all_platforms} x86_64-linux-gcc"
+ all_platforms="${all_platforms} x86_64-linux-icc"

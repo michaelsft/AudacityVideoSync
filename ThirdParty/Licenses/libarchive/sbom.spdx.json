@@ -1,32 +1,32 @@
 {
   "SPDXID": "SPDXRef-DOCUMENT",
   "spdxVersion": "SPDX-2.3",
-  "name": "SBOM-SPDX-libarchive-3.8.9",
+  "name": "SBOM-SPDX-libarchive-3.8.11",
   "creationInfo": {
-    "created": "2026-08-05T22:09:48Z",
+    "created": "2026-11-12T12:51:05Z",
     "creators": [
-      "Tool: https://github.com/Homebrew/brew@4.2.5"
+      "Tool: https://github.com/Homebrew/brew@7.0.13"
     ]
   },
   "dataLicense": "CC0-1.0",
-  "documentNamespace": "https://formulae.brew.sh/spdx/libarchive-3.8.9.json",
+  "documentNamespace": "https://formulae.brew.sh/spdx/libarchive-3.8.11.json",
   "documentDescribes": [
     "SPDXRef-Archive-libarchive-src",
-    "SPDXRef-Package-SPDXRef-libb2-0.98.1",
-    "SPDXRef-Package-SPDXRef-lz4-1.10.0",
-    "SPDXRef-Package-SPDXRef-xz-5.8.3",
-    "SPDXRef-Package-SPDXRef-zstd-1.5.7_1",
+    "SPDXRef-Package-SPDXRef-libb2-0.2e.98.2e.1",
+    "SPDXRef-Package-SPDXRef-lz4-1.2e.10.2e.0",
+    "SPDXRef-Package-SPDXRef-xz-5.2e.8.2e.4",
+    "SPDXRef-Package-SPDXRef-zstd-1.2e.5.2e.7.5f.1",
     "SPDXRef-Compiler",
     "SPDXRef-Bottle-libarchive"
   ],
   "files": [
     {
       "SPDXID": "SPDXRef-File-libarchive",
-      "fileName": "libarchive-3.8.9.tar.xz",
+      "fileName": "libarchive-3.8.11.tar.xz",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde"
+          "checksumValue": "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2"
         }
       ]
     }
@@ -35,34 +35,40 @@
     {
       "SPDXID": "SPDXRef-Archive-libarchive-src",
       "name": "libarchive",
-      "versionInfo": "3.8.9",
+      "versionInfo": "3.8.11",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-28T09:31:55Z",
+      "builtDate": "2026-10-30T20:36:39Z",
       "licenseConcluded": "BSD-2-Clause",
-      "downloadLocation": "https://www.libarchive.org/downloads/libarchive-3.8.9.tar.xz",
+      "downloadLocation": "https://www.libarchive.org/downloads/libarchive-3.8.11.tar.xz",
       "copyrightText": "NOASSERTION",
-      "externalRefs": [],
+      "externalRefs": [
+        {
+          "referenceCategory": "PACKAGE-MANAGER",
+          "referenceLocator": "pkg:brew/homebrew/core/libarchive@3.8.11",
+          "referenceType": "purl"
+        }
+      ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "888c934f9d95648ecb9163dc8e23ab80a476ecb81a8f1154704a227b5b676dde"
+          "checksumValue": "a3dc0872b1b39da34dc18ef1b944f0f11ffd37425d70ae04be679279f1cf43d2"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-Package-SPDXRef-libb2-0.98.1",
+      "SPDXID": "SPDXRef-Package-SPDXRef-libb2-0.2e.98.2e.1",
       "name": "libb2",
       "versionInfo": "0.98.1",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "CC0-1.0",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libb2/blobs/sha256:4c161a089a39249a589b88d39f57998c6a2183426647ce886708861774b001eb",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libb2/blobs/sha256:b129b1449d32b734bff99c505443981e301110ee1073131544102354acdd659f",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "4c161a089a39249a589b88d39f57998c6a2183426647ce886708861774b001eb"
+          "checksumValue": "b129b1449d32b734bff99c505443981e301110ee1073131544102354acdd659f"
         }
       ],
       "externalRefs": [
@@ -74,18 +80,18 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-Package-SPDXRef-lz4-1.10.0",
+      "SPDXID": "SPDXRef-Package-SPDXRef-lz4-1.2e.10.2e.0",
       "name": "lz4",
       "versionInfo": "1.10.0",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "BSD-2-Clause",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:caf14ac1b6c922611db94615341ed6dc97f5601664280bc1d397e10f62e37222",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/lz4/blobs/sha256:53ea7532077fe43abfe3d6e0d9991ebc8370e9edcc508f997c92902d60c8b151",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "caf14ac1b6c922611db94615341ed6dc97f5601664280bc1d397e10f62e37222"
+          "checksumValue": "53ea7532077fe43abfe3d6e0d9991ebc8370e9edcc508f997c92902d60c8b151"
         }
       ],
       "externalRefs": [
@@ -97,41 +103,41 @@
       ]
     },
     {
-      "SPDXID": "SPDXRef-Package-SPDXRef-xz-5.8.3",
+      "SPDXID": "SPDXRef-Package-SPDXRef-xz-5.2e.8.2e.4",
       "name": "xz",
-      "versionInfo": "5.8.3",
+      "versionInfo": "5.8.4",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "0BSD AND GPL-2.0-or-later",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:55c891f5d47142fe923c87df0e3343d7ef2bc7d368c67892b4ad2c80e53069d5",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/xz/blobs/sha256:b2b5d6523153be05c20bcc51cd358ea3dd1f4bf893748fdedb779ab508ea63ce",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "55c891f5d47142fe923c87df0e3343d7ef2bc7d368c67892b4ad2c80e53069d5"
+          "checksumValue": "b2b5d6523153be05c20bcc51cd358ea3dd1f4bf893748fdedb779ab508ea63ce"
         }
       ],
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:brew/xz@5.8.3",
+          "referenceLocator": "pkg:brew/xz@5.8.4",
           "referenceType": "purl"
         }
       ]
     },
     {
-      "SPDXID": "SPDXRef-Package-SPDXRef-zstd-1.5.7_1",
+      "SPDXID": "SPDXRef-Package-SPDXRef-zstd-1.2e.5.2e.7.5f.1",
       "name": "zstd",
       "versionInfo": "1.5.7_1",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "(BSD-3-Clause OR GPL-2.0-only) AND BSD-2-Clause AND MIT",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/zstd/blobs/sha256:7fb4af03304cc4897326168cdcd53290311c5543150f5502a61c3e84b6d62765",
       "copyrightText": "NOASSERTION",
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "628a4ef53428d0078e3d76d297171ce8d0294f5ec1de3f20305e08c4dd333565"
+          "checksumValue": "7fb4af03304cc4897326168cdcd53290311c5543150f5502a61c3e84b6d62765"
         }
       ],
       "externalRefs": [
@@ -145,7 +151,7 @@
     {
       "SPDXID": "SPDXRef-Compiler",
       "name": "clang",
-      "versionInfo": "26.6",
+      "versionInfo": "27.2",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
       "licenseConcluded": "NOASSERTION",
@@ -157,24 +163,24 @@
     {
       "SPDXID": "SPDXRef-Bottle-libarchive",
       "name": "libarchive",
-      "versionInfo": "3.8.9",
+      "versionInfo": "3.8.11",
       "filesAnalyzed": false,
       "licenseDeclared": "NOASSERTION",
-      "builtDate": "2026-07-28T15:14:38Z",
+      "builtDate": "2026-11-04T09:17:07Z",
       "licenseConcluded": "BSD-2-Clause",
-      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libarchive/blobs/sha256:0d24892c4031758a148bece7e41b82cc8be8c8af020eb379d43a98cf984ba26d",
+      "downloadLocation": "https://ghcr.io/v2/homebrew/core/libarchive/blobs/sha256:80ad35d8783fa7650af7f21d58473d6a9eaa1b9939de5d2da2c916b9e9d92f30",
       "copyrightText": "NOASSERTION",
       "externalRefs": [
         {
           "referenceCategory": "PACKAGE-MANAGER",
-          "referenceLocator": "pkg:brew/libarchive@3.8.9",
+          "referenceLocator": "pkg:brew/libarchive@3.8.11",
           "referenceType": "purl"
         }
       ],
       "checksums": [
         {
           "algorithm": "SHA256",
-          "checksumValue": "0d24892c4031758a148bece7e41b82cc8be8c8af020eb379d43a98cf984ba26d"
+          "checksumValue": "80ad35d8783fa7650af7f21d58473d6a9eaa1b9939de5d2da2c916b9e9d92f30"
         }
       ]
     }
@@ -186,22 +192,22 @@
       "relatedSpdxElement": "SPDXRef-Archive-libarchive-src"
     },
     {
-      "spdxElementId": "SPDXRef-Package-SPDXRef-libb2-0.98.1",
+      "spdxElementId": "SPDXRef-Package-SPDXRef-libb2-0.2e.98.2e.1",
       "relationshipType": "RUNTIME_DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-Bottle-libarchive"
     },
     {
-      "spdxElementId": "SPDXRef-Package-SPDXRef-lz4-1.10.0",
+      "spdxElementId": "SPDXRef-Package-SPDXRef-lz4-1.2e.10.2e.0",
       "relationshipType": "RUNTIME_DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-Bottle-libarchive"
     },
     {
-      "spdxElementId": "SPDXRef-Package-SPDXRef-xz-5.8.3",
+      "spdxElementId": "SPDXRef-Package-SPDXRef-xz-5.2e.8.2e.4",
       "relationshipType": "RUNTIME_DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-Bottle-libarchive"
     },
     {
-      "spdxElementId": "SPDXRef-Package-SPDXRef-zstd-1.5.7_1",
+      "spdxElementId": "SPDXRef-Package-SPDXRef-zstd-1.2e.5.2e.7.5f.1",
       "relationshipType": "RUNTIME_DEPENDENCY_OF",
       "relatedSpdxElement": "SPDXRef-Bottle-libarchive"
     },
